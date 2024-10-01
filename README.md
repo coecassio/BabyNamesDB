@@ -18,6 +18,8 @@ On another note, most queries in this project require creating name popularity r
 
 Now, let us explore a few results for each specific objetive:
 
+
+
 #### Objective 1: Track changes in name popularity, exploring how the most popular names have changed over time.
 
 The overall most popular girl name is Jessica, and boy name is Michael. While Michael continues to be a top 3 until 2009, Jessica starts falling out of favour in 1998.
@@ -31,9 +33,11 @@ As for names with biggest jumps in popularity between the first and last years, 
 For this objective, we developed outputs organized as both ordinary tables and pivot tables/matrix.
 
 
+
 #### Objective 3: Compare popularity across regions, finding the top 3 names for each birth gender by region.
 
 We got the total number of babies born by region for the the entire period, and then by year.
+
 
 
 #### Objective 4: Explore unique names in the dataset, exploring the shortest and long names, and the state with highest percent of babies named "Chris".
