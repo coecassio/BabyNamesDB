@@ -1,14 +1,17 @@
 # US Baby Name Analysis
 
-Project Overview:
+## Project Overview:
+
 This project was inspired by the Guided Project Baby Trend Name Analysis, provided by Maven Analytics. The main objective is analysing trends in baby name popularity based on US social security data from 1980-2009, tracking changes, comparing popularity across decades and regions, and exploring unique names.
 
-Data Model:
+## Data Model:
+
 The schema used is quite simple, with a fact table cointaining the amount of babies born with each name by State (including DC), birth Gender and Year, and a single fact table associating each State to a designated US Region.
 
 After some initial exploration, two problems were uncovered in the regions fact table: the New Hampshire (NH) state was registered as "New England", instead of "New_England", and Michigan (MI) is missing from the Region column. While the inconsistencies could easily be addressed during analysis by writing a CTE correction every time the regions table was used, the best practice would be to inform the relevant people as to ensure data integrity. As such, since we're also acting as the database admin, a baby_names_regions_fix.sql was deployed to UPDATE and INSERT the necessary information.
 
-Analysis:
+##Analysis:
+
 After the initial exploratory analysis mentioned above, our focus was to answer the questions proposed by the brief, and, since we had no means to contact our internal client to enquire about how they intend to use or present the data, we used this opportunity to explore different output structres for the same data, namely ordinary tables vs pivot tables/matrix.
 
 On another note, most queries in this project require creating name popularity ranks, to track variation over time and across regions. From the 3 main ranking windows functions applicable in this instance, ROW_NUMBER(), RANK() and DENSE_RANK(), we opted to use RANK() as it respects both ties and gaps. Since ROW_NUMBER() breaks ties in an arbitrary way, it can lead to inconsistent results when evaluating lower ranks, with many ties. DENSE_RANK() not respecting ties can cause a considerable rank shrinkage and misleading results.
