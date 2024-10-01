@@ -24,7 +24,7 @@ The overall most popular girl name is Jessica, and boy name is Michael. While Mi
 
 As for names with biggest jumps in popularity between the first and last years, we get very different results if we evaluate by number of births or by rank variation. In the former, we get names that were already     commonly used getting more popular, while the later has names that used to be very niche climbing thousands of ranks.
 
- **Objective 2:** Compare popularity across decades, finding the top 3 names for each birth gender by year and decade.
+ - **Objective 2:** Compare popularity across decades, finding the top 3 names for each birth gender by year and decade.
 
 For this objective, we developed outputs organized as both ordinary tables and pivot tables/matrix.
 
