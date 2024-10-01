@@ -19,7 +19,7 @@ FROM names n
 		ON n.State = r.State;
 
 /* Note: It seems there are two problems in the 
-Region table:
+regions fact table:
 1. New Hampshire's state was registered 
 as "New England", instead of "New_England"
 2. Michigan (MI) is missing from the regions
