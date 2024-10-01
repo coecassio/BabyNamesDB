@@ -11,8 +11,8 @@ SELECT COUNT(DISTINCT State) as states
 FROM names;
 
 SELECT DISTINCT
-	n.State, 
-    r.State, 
+	n.State AS names_state, 
+    r.State AS regions_state, 
     r.Region
 FROM names n 
 	LEFT JOIN regions r 
@@ -85,7 +85,7 @@ GROUP BY 1, 2
 )
 SELECT Year, name_ranking
 FROM girl_ranking
-WHERE Name = "Jessica"; 
+WHERE Name = "Jessica";
 
 /* Note: While unsing RANK() allows value ties, those 
 still count towards the next number in the order. 
@@ -475,4 +475,4 @@ FROM names n
 	LEFT JOIN chris_amount ca 
 		ON n.State = ca.State
 GROUP BY 1, 2
-ORDER BY 4,3 DESC;
+ORDER BY 4 DESC;
